@@ -1,0 +1,2253 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');*/
+/*@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Urbanist', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    transition: all 0.3 linear;
+}
+
+html, body{
+    scroll-behavior: smooth;
+    scroll-padding-top: 10rem;
+    overflow-x: hidden;
+}
+
+/* customizacao barra de rolagem */
+html::-webkit-scrollbar {
+    width: 0.6rem;
+}
+html::-webkit-scrollbar-track {
+    background: #00702B;
+    opacity: 0.5;
+}
+html::-webkit-scrollbar-thumb {
+    background: #90c01f;
+    border-radius: 5rem;
+}
+
+
+/*animation*/
+.hiddenleft{
+    opacity: 0;
+    filter: bluer(30rem);
+    transform: translateX(-8%);
+    transition: all 1.5s;
+}
+.hiddenright{
+    opacity: 0;
+    filter: bluer(30rem);
+    transform: translateX(+8%);
+    transition: all 1.5s;
+}
+.hiddentop{
+    opacity: 0;
+    filter: bluer(30rem);
+    transform: translateY(+8%);
+    transition: all 1.5s;
+}
+.hiddenbottom{
+    opacity: 0;
+    filter: bluer(30rem);
+    transform: translateY(-8%);
+    transition: all 1.5s;
+}
+.show{
+    opacity: 2;
+    filter: bluer(0);
+    transform: translateX(0);
+}
+
+/*max-width: 1680px*/
+
+
+
+/*CTA*/
+#navbar {
+    background-color: #eff8ee; /* Black background color */
+    position: fixed; /* Make it stick/fixed */
+    top: -10rem; /* Hide the navbar 50 px outside of the top view */
+    width: 100%; /* Full width */
+    transition: top 1s; /* Transition effect when sliding down (and up) */
+    text-align: center;
+    z-index: 1000;
+    opacity: 0.95;
+}
+.cta {
+    font-weight: 800;
+    margin: 1rem auto;
+    display: inline-block;
+    color: #009238;
+    font-size: 2rem;
+    padding: 10px 30px 10px 30px;
+    border: solid 0.30rem;
+    border-radius: 50px;
+    animation: pulse 2s infinite;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    transition: .6s;
+}
+#navbar .cta:hover {
+    border: solid 0.20rem;
+    background-color: #009238;
+    color: white;
+    
+}
+@keyframes pulse{
+    0%{
+        transform: scale(0.90);
+        box-shadow: 0 0 0 0 rgba(223, 223, 223, 0.7);
+    }
+    70%{
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(192, 192, 192, 0.4);
+    }
+    100%{
+        transform: scale(0.90);
+        box-shadow: 0 0 0 0 rgba(46, 46, 46, 0);
+    }
+}
+
+/*END CTA*/
+
+/*HOME*/
+
+#home{
+    width: 100%;
+    height: 120vh;
+    background-image: url(assets/imagens/home-fundo-desktop.png);
+    background-size:cover;
+    background-position: top right;
+    display: flex;
+    padding: 6rem 6rem 6rem 6rem;
+    
+}
+.home{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+/*texts*/
+.home-text{
+    width: 100%;
+    margin-top: 2rem;
+    padding-bottom: 0px;
+}
+.home-text .text-principal{
+    font-weight: 800;
+    text-align: left;
+    font-size: 6.5rem;
+    /*color: #0D56B2;*/
+    background-image: linear-gradient(to bottom right, #009238 0%, #00702B 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        max-width: 70%;
+    margin-bottom: 3rem;
+}
+.home-text .text-secundario{
+    font-weight: 500;
+    text-align: left;
+    font-size: 3.2rem;
+    background-image: linear-gradient(to bottom right, #F2E1DC 0%, #FFFFFF 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    max-width: 50%;
+    line-height: 3.8rem;
+}
+.home-text .text-secundario b{
+    font-weight: 800;
+    font-size: 3.4rem;
+}
+/*button*/
+/*#home-btn-{
+    margin-top: 10rem;
+    text-align: center;
+    transition-delay: 900ms;
+}
+.home-btn{
+    font-family: "Altone-Negrito";
+    border: solid 0.20rem;
+    /*background: #BD8F80;*/
+    /*font-size: 2rem;
+    padding: 20px 25px 20px 25px;
+    color: white;
+    border-radius: 5rem;
+    transition: all 0.5s;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+.home-btn:hover{
+    border: none;
+    background: white;
+    color: #009238;
+}*/
+.home-button{
+    margin-top: 2rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content:center;
+}
+.home-button .home-btnn{
+    font-weight: 600;
+    border: solid 0.30rem;
+    /*background: linear-gradient(167deg, rgba(147,192,31,1) 0%, rgb(102, 136, 15) 79%);*/
+    font-size: 2.8rem;
+    padding: 15px 30px 15px 30px;
+    color: white;
+    border-radius: 5rem;
+    transition: all 0.5s;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    animation: animated 3s infinite;
+}
+.home-button .home-btnn:hover{
+    background: white;
+    color: #93C01F;
+}
+@keyframes animated{
+    0%{
+        transform: scale(0.90);
+        box-shadow: 0 0 0 0 rgba(146, 146, 146, 0.7);
+    }
+    70%{
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.4);
+    }
+    100%{
+        transform: scale(0.90);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+/*product*/
+/*.home-img img{
+    max-width: 50%;
+    min-width: 95vh;
+    margin-top: 180px;  
+}*/
+
+/*END HOME*/
+
+/*BENEFITS*/
+
+#benefits{
+    padding-top: 8rem;
+    padding-bottom: 15rem;
+    background-image: url(assets/imagens/background-benefits-.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: bottom right;
+    background-attachment:local;
+}
+
+/*cards*/
+.content-card {
+    padding: 1rem;
+    margin: 0 10rem 4rem 10rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    background-image: url(assets/imagens/background-cards.png);
+    background-size:cover;
+    background-position: bottom bottom;
+    background-attachment:fixed;
+    /*background: linear-gradient(140deg, rgb(147,192, 31) 0%, rgb(101, 178, 46) 89%);*/
+}
+.benefits-title{
+    margin: 0rem;
+}
+.content-card-title-principal{
+    font-weight: 800;
+    margin: 0 10rem 2rem 10rem;
+    text-align: center;
+    font-size: 4.2rem;
+    background: linear-gradient(167deg, rgba(255,255,255,1) 0%, rgba(252,247,244,1) 79%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+}
+.content-card-title-secundario{
+    font-weight: 600;
+    text-align: center;
+    font-size: 3rem;
+    background: linear-gradient(167deg, rgba(255,255,255,1) 0%, rgba(252,247,244,1) 79%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    margin-top: 2rem;
+}
+.content-card .background-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.content-card .background-card .container-card {
+    margin: 1rem 0 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.content-card .background-card .container-card .card {
+    width: 500px;
+    height: 540px;
+    background-image: url(assets/imagens/box-card.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+    background-attachment:fixed;
+    /*background: linear-gradient(220deg, rgb(0, 146, 56) 0%, rgb(0, 112, 43) 79%);*/
+    margin: 0.5rem;
+    border-radius: 20px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);
+    border: 2px solid rgba(7, 7, 7, 0.12);
+    font-size: 16px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.content-card .background-card .container-card .card .icon-benefits {
+    margin-top: 2rem;
+    margin-bottom: -.8rem;
+    width: 6rem;
+    /*background: linear-gradient(195deg, rgba(172,108,87,1) 0%, rgba(180,128,112,1) 75%);
+    border-radius: 50%;*/
+    color: white;
+    transition: all 0.8s ease;
+} 
+.content-card .background-card .container-card .card .titlee {
+    font-weight: 400;
+    width: 90%;
+    margin: 0;
+    font-size: 1.9rem;
+    text-align: center;
+    margin-top: 1rem;
+    background: linear-gradient(140deg, rgb(229, 247, 236) 0%, rgb(217, 250, 230) 89%);
+    background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+} 
+.content-card .background-card .container-card .card .titlee b{
+    font-weight: 800;
+    font-size: 2.1rem;
+} 
+.content-card .background-card .container-card .card:hover .titlee {
+    margin-top: -.8rem;
+    transition: all 0.9s ease;
+} 
+.content-card .background-card .container-card .card:hover {
+    background-image: url(assets/imagens/box-card-hover.png);
+    background-size:cover;
+    background-position: center right;
+    /*background: linear-gradient(195deg, rgba(0,130,186,1) 0%, rgba(0,158,226,1) 76%);*/
+    background-clip: text;
+    height: 475px;
+}
+.card:hover .icon-benefits {
+    background-position: -120px;
+    transition: all 0.3s ease;
+}
+.content-card .background-card .container-card .card:hover .icon-benefits {
+    background: transparent;
+    opacity: .3;
+    transition: all 0.9s ease;
+}
+
+/*differentials*/
+.differentials-title-secundario{
+    font-weight: 600;
+    text-align: center;
+    font-size: 3.5rem;
+    background: linear-gradient(167deg, rgb(245, 252, 246) 0%, rgb(236, 253, 240) 79%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+}
+.differentials-title-principal{
+    font-weight: 800;
+    text-align: center;
+    font-size: 4.8rem;
+    font-weight: 700;
+    background: linear-gradient(167deg, rgb(240, 247, 241) 0%, rgb(227, 243, 226) 79%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    margin: 10rem 4rem 0 4rem;
+}
+.differentials-button{
+    margin-top: 6rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content:center;
+}
+.differentials-button .differentials-btn{
+    font-weight: 600;
+    background: linear-gradient(167deg, rgba(147,192,31,1) 0%, rgb(102, 136, 15) 79%);
+    font-size: 3rem;
+    padding: 20px 50px 20px 50px;
+    color: white;
+    border-radius: 5rem;
+    transition: all 0.5s;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    animation: animated 3s infinite;
+}
+.differentials-button .differentials-btn:hover{
+    background: white;
+    color: #93C01F;
+}
+@keyframes animated{
+    0%{
+        transform: scale(0.90);
+        box-shadow: 0 0 0 0 rgba(146, 146, 146, 0.7);
+    }
+    70%{
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.4);
+    }
+    100%{
+        transform: scale(0.90);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+ /*END PRODUCT*/
+
+/*ARG-3*/
+
+#arg3{
+    width: 100%;
+    display: flex;
+    /*background: linear-gradient(145deg, rgba(16,77,163,1) 0%, rgba(13,86,178,1) 42%, rgba(5,113,220,1) 100%);*/
+    background-image: url(assets/imagens/baclground-green-escuro.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+    background-attachment:fixed;
+}
+.arg3{
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    align-items:center;
+    justify-content:center; 
+}
+.arg3-title .arg3-title-principal{
+    font-weight: 800;
+    margin: 0 2rem 0 2rem;
+    text-align: right;
+    font-size: 4.2rem;
+    color: #fff;
+    max-width: 750px;
+}
+.arg3-title .arg3-title-secundario{
+    font-weight: 500;
+    margin: 0 2rem 0 2rem;
+    text-align: right;
+    font-size: 3rem;
+    color: #fff;
+    max-width: 750px;
+}
+.arg3-info{
+    max-width: 40%; 
+    margin: 8rem 0rem 8rem 0rem;
+}
+.icon-arg3-info {
+    max-width: 40px;
+    display: inline-block;
+    margin-bottom: -0.2rem;
+}
+.arg3-info-div {
+    margin: 6rem 2rem 6rem 2rem;
+    border-radius: 2rem;
+    flex-wrap: wrap;
+    max-width: 70%;
+}
+.arg3-infos{
+    font-weight: 400;
+    font-size: 1.9rem;
+    color: #fff;
+}
+.arg3-infos b{
+    font-weight: 800;
+    font-size: 2.4rem;
+    color: #afe032;
+}
+
+/*END - ARG3 */
+
+/*ARG-4*/
+
+#arg4{
+    width: 100%;
+    display: flex;
+    /*background: linear-gradient(145deg, rgba(16,77,163,1) 0%, rgba(13,86,178,1) 42%, rgba(5,113,220,1) 100%);*/
+    background-image: url(assets/imagens/baclground-green-branco.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+    background-attachment:fixed;
+}
+.arg4{
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    align-items:center;
+    justify-content:center; 
+}
+.arg4-title .arg4-title-principal{
+    font-weight: 800;
+    margin: 0 2rem 0 2rem;
+    text-align: right;
+    font-size: 4.2rem;
+    background-image: linear-gradient(to bottom right, #009238 0%, #00702B 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    max-width: 750px;
+}
+.arg4-title .arg4-title-secundario{
+    font-weight: 500;
+    margin: 0 2rem 0 2rem;
+    text-align: right;
+    font-size: 3rem;
+    background-image: linear-gradient(to bottom right, #90c01f 0%, #6d960d 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    max-width: 750px;
+}
+.arg4-info{
+    max-width: 40%; 
+    margin: 8rem 0rem 8rem 0rem;
+}
+.icon-arg4-info {
+    max-width: 40px;
+    display: inline-block;
+    margin-bottom: -0.2rem;
+}
+.arg4-info-div {
+    margin: 6rem 2rem 6rem 2rem;
+    border-radius: 2rem;
+    flex-wrap: wrap;
+    max-width: 70%;
+}
+.arg4-infos{
+    font-weight: 400;
+    font-size: 1.9rem;
+    background-image: linear-gradient(to bottom right, #009238 0%, #00702B 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+}
+.arg4-infos b{
+    font-weight: 800;
+    font-size: 1.9rem;
+}
+
+/*END - ARG4 */
+
+/* ARG5 */
+
+#arg5{
+    width: 100%;
+    display: flex;
+    /*background: linear-gradient(145deg, rgba(16,77,163,1) 0%, rgba(13,86,178,1) 42%, rgba(5,113,220,1) 100%);*/
+    background-image: url(assets/imagens/baclground-green-claro.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: top center;
+    background-attachment:fixed;
+}
+.arg5{
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    align-items:center;
+    justify-content:center; 
+    text-align: center;
+}
+.arg5-button{
+    margin: 10rem 1rem 10rem 1rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content:center;
+}
+.arg5-button .arg5-btn{
+    font-weight: 800;
+    background: linear-gradient(167deg, rgb(251, 255, 243) 0%, rgb(244, 250, 229) 79%);
+    font-size: 2.9rem;
+    padding: 20px 25px 20px 25px;
+    color: #009238;
+    border-radius: 5rem;
+    transition: all 0.5s;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    animation: animated 3s infinite;
+}
+.arg5-button .arg5-btn:hover{
+    background: #009238;
+    color: white;
+}
+@keyframes animated{
+    0%{
+        transform: scale(0.90);
+        box-shadow: 0 0 0 0 rgba(146, 146, 146, 0.7);
+    }
+    70%{
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.4);
+    }
+    100%{
+        transform: scale(0.90);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+/*ARG7*/
+
+#arg7{
+    width: 100%;
+    height: 120vh;
+    background-image: url(assets/imagens/final-fundo-desktop.png);
+    background-size:cover;
+    background-position: top right;
+    display: flex;
+    padding: 6rem 6rem 6rem 6rem;
+    
+}
+.arg7{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+/*texts*/
+.arg7-text{
+    width: 100%;
+    margin-top: 2rem;
+    padding-bottom: 0px;
+}
+.arg7-text .text-principal{
+    font-weight: 800;
+    text-align: left;
+    font-size: 6.5rem;
+    /*color: #0D56B2;*/
+    background-image: linear-gradient(to bottom right, #009238 0%, #00702B 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        max-width: 60%;
+    margin-bottom: 3rem;
+}
+.arg7-text .text-secundario{
+    font-weight: 500;
+    text-align: left;
+    font-size: 3.2rem;
+    background-image: linear-gradient(to bottom right, #F2E1DC 0%, #FFFFFF 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    max-width: 40%;
+}
+.arg7-text .text-secundario b{
+    font-weight: 800;
+    font-size: 3.4rem;
+}
+/*button*/
+#arg7-btn-{
+    margin-top: 6rem;
+    text-align: center;
+    transition-delay: 900ms;
+}
+.arg7-btn{
+    font-weight: 800;
+    border: solid 0.20rem;
+    /*background: #BD8F80;*/
+    font-size: 2.5rem;
+    padding: 20px 25px 20px 25px;
+    color: white;
+    border-radius: 5rem;
+    transition: all 0.5s;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+.arg7-btn:hover{
+    border: none;
+    background: white;
+    color: #009238;
+}
+
+
+
+/*FOOTER*/
+/*titulo*/
+#footer{
+    padding: .5rem 0 .5rem 0;
+    max-width: 100%;
+    display: flex;
+    background: linear-gradient(34deg, rgb(145, 145, 145) 0%, rrgb(197, 197, 197)63%);
+}
+.footer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:center;  
+}
+.footer-title .footer-title-principal{
+    margin: .2rem 0 .2rem 0;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    background-image: linear-gradient(34deg, rgb(136, 136, 136) 0%, rgb(184, 184, 184) 63%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    width: 100%;
+}
+  
+ 
+  
+
+
+
+
+
+
+
+
+
+
+/*RESPONSIVIDADE*/
+
+
+/*2048*/
+@media (max-width:2048px) {
+
+/*HOME*/
+
+#home{
+    width: 100%;
+    height: 100vh;
+    background-image: url(assets/imagens/home-fundo-desktop.png);
+    background-size:cover;
+    background-position: top right;
+    display: flex;
+    padding: 2rem 4rem 4rem 4rem;
+    
+}
+/*texts*/
+.home-text{
+    width: 100%;
+    margin-top: 2rem;
+    padding-bottom: 0px;
+}
+.home-text .text-principal{
+    font-size: 5rem;
+    max-width: 60%;
+    margin-bottom: 4rem;
+}
+.home-text .text-secundario{
+    font-size: 2.9rem;
+    max-width: 40%;
+    line-height: 3.1rem;
+}
+.home-text .text-secundario b{
+    font-size: 3rem;
+}
+/*button*/
+.home-button{
+    margin-top: 1.5rem;
+}
+.home-button .home-btnn{
+    border: solid 0.30rem;
+    font-size: 2.4rem;
+    padding: 10px 30px 10px 30px;
+    color: white;
+    border-radius: 5rem;
+}
+
+/*END HOME*/
+
+/*ARG7*/
+
+#arg7{
+    width: 100%;
+    height: 120vh;
+    background-size:cover;
+    background-position: top left;
+    display: flex;
+    padding: 2rem 4rem 4rem 4rem;
+    
+}
+/*texts*/
+.arg7-text{
+    width: 100%;
+    margin-top: 2rem;
+    padding-bottom: 0px;
+}
+.arg7-text .text-principal{
+    font-size: 5rem;
+    max-width: 60%;
+    margin-bottom: 8rem;
+}
+.arg7-text .text-secundario{
+    font-size: 2.5rem;
+    max-width: 50%;
+}
+.arg7-text .text-secundario b{
+    font-size: 2.6rem;
+}
+/*button*/
+#arg7-btn-{
+    margin-top: 3rem;
+    text-align: center;
+}
+.arg7-btn{
+    border: solid 0.15rem;
+    font-size: 2.2rem;
+    padding: 10px 20px 10px 20px;
+}
+
+/*END ARG7*/
+
+
+
+
+}
+
+
+
+/*1920*/
+@media (max-width:1920px) {
+
+/*CTA*/
+.cta {
+    margin: .8rem auto;
+    font-size: 1.5rem;
+    padding: 6px 20px;
+}
+
+/*HOME*/
+
+#home{
+    width: 100%;
+    height: 110vh;
+    background-image: url(assets/imagens/home-fundo-desktop.png);
+    background-size:cover;
+    background-position: top right;
+    display: flex;
+    padding: 2rem 4rem 4rem 4rem;
+    
+}
+/*texts*/
+.home-text{
+    width: 100%;
+    margin-top: 2rem;
+    padding-bottom: 0px;
+}
+.home-text .text-principal{
+    font-size: 4.5rem;
+    max-width: 60%;
+    margin-bottom: 4rem;
+}
+.home-text .text-secundario{
+    font-size: 2.2rem;
+    max-width: 40%;
+    line-height: 2.9rem;
+}
+.home-text .text-secundario b{
+    font-size: 2.4rem;
+}
+/*button*/
+.home-button .home-btnn{
+    border: solid 0.30rem;
+    font-size: 2rem;
+    padding: 10px 30px 10px 30px;
+    color: white;
+    border-radius: 5rem;
+}
+
+/*END HOME*/
+
+/*cards*/
+.content-card {
+    padding: 1rem;
+    margin: 0 2rem 4rem 2rem;
+}
+.content-card-title-secundario{
+    font-size: 2rem;
+}
+.content-card-title-principal{
+    font-size: 2.9rem;
+}
+.content-card .background-card .container-card .card {
+    margin: 1rem;
+    width: 380px;
+    height: 420px;
+}
+.content-card .background-card .container-card .card .icon-benefits {
+    width: 5rem;
+} 
+.content-card .background-card .container-card .card .titlee {
+    font-size: 1.5rem;
+} 
+.content-card .background-card .container-card .card .titlee b{
+    font-size: 1.6rem;
+} 
+.content-card .background-card .container-card .card:hover {
+    height: 360px;
+}
+
+
+/*differentials*/
+.differentials-title-secundario{
+    font-size: 3rem;
+}
+.differentials-title-principal{
+    font-size: 4.5rem;
+    margin: 16rem 6rem 0 6rem;   
+}
+.differentials-button{
+    margin-top: 6rem;
+}
+.differentials-button .differentials-btn{
+    background: linear-gradient(167deg, rgba(147,192,31,1) 0%, rgb(102, 136, 15) 79%);
+    font-size: 2.2rem;
+    padding: 10px 20px 8px 20px;
+}
+/*END PRODUCT*/
+
+/*ARG-3*/
+.arg3-title .arg3-title-principal{
+    margin: 0 2rem 0 2rem;
+    text-align: right;
+    font-size: 2.9rem;
+    color: #fff;
+    max-width: 500px;
+}
+.arg3-title .arg3-title-secundario{
+    margin: 0 2rem 0 2rem;
+    text-align: right;
+    font-size: 2rem;
+    max-width: 500px;
+}
+.arg3-info{
+    max-width: 40%; 
+    margin: 8rem 0rem 8rem 0rem;
+}
+.icon-arg3-info {
+    max-width: 30px;
+    display: inline-block;
+    margin-bottom: -0.2rem;
+}
+.arg3-info-div {
+    margin: 1rem 2rem 1rem 2rem;
+    border-radius: 2rem;
+    flex-wrap: wrap;
+    max-width: 70%;
+}
+.arg3-infos{
+    font-size: 1.5rem;
+}
+.arg3-infos b{
+    font-size: 1.9rem;
+}
+
+/*ARG-4*/
+.arg4-title .arg4-title-principal{
+    margin: 0 2rem 0 2rem;
+    text-align: right;
+    font-size: 2.9rem;
+    max-width: 500px;
+}
+.arg4-title .arg4-title-secundario{
+    margin: 0 2rem 0 2rem;
+    text-align: right;
+    font-size: 2rem;
+    max-width: 500px;
+}
+.arg4-info{
+    max-width: 40%; 
+    margin: 4rem 0rem 4rem 0rem;
+}
+.icon-arg4-info {
+    max-width: 30px;
+    display: inline-block;
+    margin-bottom: -0.2rem;
+}
+.arg4-info-div {
+    margin: 3rem 2rem 3rem 2rem;
+    border-radius: 2rem;
+    flex-wrap: wrap;
+    max-width: 70%;
+}
+.arg4-infos{
+    font-size: 1.5rem;
+}
+.arg4-infos b{
+    font-size: 1.5rem;
+}
+
+/*ARG7*/
+
+#arg7{
+    width: 100%;
+    height: 120vh;
+    background-size:cover;
+    background-position: top right;
+    display: flex;
+    padding: 2rem 4rem 4rem 4rem;
+    
+}
+/*texts*/
+.arg7-text{
+    width: 100%;
+    margin-top: 2rem;
+    padding-bottom: 0px;
+}
+.arg7-text .text-principal{
+    font-size: 4.5rem;
+    max-width: 60%;
+    margin-bottom: 4rem;
+}
+.arg7-text .text-secundario{
+    font-size: 2.1rem;
+    max-width: 50%;
+}
+.arg7-text .text-secundario b{
+    font-size: 2.1rem;
+}
+/*button*/
+#arg7-btn-{
+    margin-top: 6rem;
+    text-align: center;
+}
+.arg7-btn{
+    border: solid 0.15rem;
+    font-size: 2.2rem;
+    padding: 10px 20px 10px 20px;
+}
+
+/*END ARG7*/
+
+
+
+
+/*FOOTER*/
+/*titulo*/
+#footer{
+    padding: .5rem 0 .5rem 0;
+}
+.footer-title .footer-title-principal{
+    margin: .2rem 0 .2rem 0;
+    font-size: 1.5rem;
+}
+  
+}
+
+/*1600*/
+@media (max-width:1600px) {
+
+
+/*HOME*/
+
+#home{
+    width: 100%;
+    height: 110vh;
+    background-image: url(assets/imagens/home-fundo-desktop.png);
+    background-size:cover;
+    background-position: top right;
+    display: flex;
+    padding: 2rem 4rem 4rem 4rem;
+    
+}
+/*texts*/
+.home-text{
+    width: 100%;
+    margin-top: 2rem;
+    padding-bottom: 0px;
+}
+.home-text .text-principal{
+    font-size: 4rem;
+    max-width: 60%;
+    margin-bottom: 4rem;
+}
+.home-text .text-secundario{
+    font-size: 2.2rem;
+    max-width: 50%;
+    line-height: 2.9rem;
+}
+.home-text .text-secundario b{
+    font-size: 2.4rem;
+}
+/*button*/
+.home-button .home-btnn{
+    border: solid 0.30rem;
+    font-size: 2rem;
+    padding: 10px 30px 10px 30px;
+    color: white;
+    border-radius: 5rem;
+}
+
+/*END HOME*/
+
+/*ARG7*/
+
+#arg7{
+    width: 100%;
+    height: 120vh;
+    background-size:cover;
+    background-position: top right;
+    display: flex;
+    padding: 2rem 4rem 4rem 4rem;
+    
+}
+/*texts*/
+.arg7-text{
+    width: 100%;
+    margin-top: 2rem;
+    padding-bottom: 0px;
+}
+.arg7-text .text-principal{
+    font-size: 4.5rem;
+    max-width: 70%;
+    margin-bottom: 4rem;
+}
+.arg7-text .text-secundario{
+    font-size: 2.1rem;
+    max-width: 50%;
+}
+.arg7-text .text-secundario b{
+    font-size: 2.1rem;
+}
+/*button*/
+#arg7-btn-{
+    margin-top: 4rem;
+    text-align: center;
+}
+.arg7-btn{
+    border: solid 0.15rem;
+    font-size: 1.7rem;
+    padding: 10px 20px 10px 20px;
+}
+
+/*END ARG7*/
+
+
+
+
+
+
+}
+
+/*1440*/
+@media (max-width:1440px) {
+
+/*CTA*/
+.cta {
+    margin: .8rem auto;
+    border: solid 0.20rem;
+    font-size: 1.2rem;
+    padding: 8px 20px;
+}
+
+/*HOME*/
+
+#home{
+    width: 100%;
+    height: 110vh;
+    background-image: url(assets/imagens/home-fundo-desktop.png);
+    background-size:cover;
+    background-position: top right;
+    display: flex;
+    padding: 2rem 4rem 4rem 4rem;
+    
+}
+/*texts*/
+.home-text{
+    width: 100%;
+    margin-top: 2rem;
+    padding-bottom: 0px;
+}
+.home-text .text-principal{
+    font-size: 3.2rem;
+    max-width: 60%;
+    margin-bottom: 3rem;
+}
+.home-text .text-secundario{
+    font-size: 1.7rem;
+    max-width: 40%;
+    line-height: 2.1rem;
+}
+.home-text .text-secundario b{
+    font-size: 1.9rem;
+}
+/*button*/
+.home-button .home-btnn{
+    border: solid 0.20rem;
+    font-size: 1.4rem;
+    padding: 10px 20px 10px 20px;
+    color: white;
+    border-radius: 5rem;
+}
+
+/*END HOME*/
+
+/*cards*/
+.content-card {
+    padding: 1rem;
+    margin: 0 2rem 4rem 2rem;
+}
+.content-card-title-secundario{
+    font-size: 1.9rem;
+}
+.content-card-title-principal{
+    font-size: 2.5rem;
+}
+.content-card .background-card .container-card .card {
+    margin: 1rem;
+    width: 360px;
+    height: 370px;
+}
+.content-card .background-card .container-card .card .icon-benefits {
+    width: 5rem;
+} 
+.content-card .background-card .container-card .card .titlee {
+    font-size: 1.3rem;
+} 
+.content-card .background-card .container-card .card .titlee b{
+    font-size: 1.4rem;
+} 
+.content-card .background-card .container-card .card:hover {
+    height: 310px;
+}
+
+
+/*differentials*/
+.differentials-title-secundario{
+    font-size: 2.3rem;
+}
+.differentials-title-principal{
+    font-size: 4rem;
+    margin: 16rem 6rem 0 6rem;   
+}
+.differentials-button{
+    margin-top: 6rem;
+}
+.differentials-button .differentials-btn{
+    background: linear-gradient(167deg, rgba(147,192,31,1) 0%, rgb(102, 136, 15) 79%);
+    font-size: 2rem;
+    padding: 10px 20px 8px 20px;
+}
+/*END PRODUCT*/
+
+/*ARG-3*/
+.arg3-title .arg3-title-principal{
+    margin: 0 2rem 0 2rem;
+    text-align: right;
+    font-size: 2.5rem;
+    color: #fff;
+    max-width: 400px;
+}
+.arg3-title .arg3-title-secundario{
+    margin: 0 2rem 0 2rem;
+    text-align: right;
+    font-size: 1.7rem;
+    max-width: 400px;
+}
+.arg3-info{
+    max-width: 40%; 
+    margin: 8rem 0rem 8rem 0rem;
+}
+.icon-arg3-info {
+    max-width: 30px;
+    display: inline-block;
+    margin-bottom: -0.2rem;
+}
+.arg3-info-div {
+    margin: 1rem 2rem 1rem 2rem;
+    border-radius: 2rem;
+    flex-wrap: wrap;
+    max-width: 80%;
+}
+.arg3-infos{
+    font-size: 1.3rem;
+}
+.arg3-infos b{
+    font-size: 1.6rem;
+}
+
+/*ARG-4*/
+.arg4-title .arg4-title-principal{
+    margin: 0 2rem 0 2rem;
+    text-align: right;
+    font-size: 2.5rem;
+    max-width: 400px;
+}
+.arg4-title .arg4-title-secundario{
+    margin: 0 2rem 0 2rem;
+    text-align: right;
+    font-size: 1.7rem;
+    max-width: 400px;
+}
+.arg4-info{
+    max-width: 40%; 
+    margin: 4rem 0rem 4rem 0rem;
+}
+.icon-arg4-info {
+    max-width: 30px;
+    display: inline-block;
+    margin-bottom: -0.2rem;
+}
+.arg4-info-div {
+    margin: 3rem 2rem 3rem 2rem;
+    border-radius: 2rem;
+    flex-wrap: wrap;
+    max-width: 80%;
+}
+.arg4-infos{
+    font-size: 1.3rem;
+}
+.arg4-infos b{
+    font-size: 1.3rem;
+}
+
+/* ARG5 */
+.arg5-button .arg5-btn{
+    font-size: 2rem;
+    padding: 20px 25px 20px 25px;
+    border-radius: 5rem;
+}
+
+/*ARG7*/
+
+#arg7{
+    width: 100%;
+    height: 120vh;
+    background-image: url(assets/imagens/final-fundo-desktop.png);
+    background-size:cover;
+    background-position: top right;
+    display: flex;
+    padding: 2rem 4rem 4rem 4rem;
+}
+/*texts*/
+.arg7-text{
+    width: 100%;
+    margin-top: 4rem;
+    padding-bottom: 0px;
+}
+.arg7-text .text-principal{
+    font-size: 3.5rem;
+    max-width: 60%;
+    margin-bottom: 3rem;
+}
+.arg7-text .text-secundario{
+    font-size: 1.6rem;
+    max-width: 50%;
+    line-height: 2.3rem;
+}
+.arg7-text .text-secundario b{
+    font-size: 1.8rem;
+}
+/*button*/
+#arg7-btn-{
+    margin-top: 4rem;
+    text-align: center;
+}
+.arg7-btn{
+    border: solid 0.15rem;
+    font-size: 1.5rem;
+    padding: 10px 20px 10px 20px;
+}
+
+/*END ARG7*/
+
+/*FOOTER*/
+/*titulo*/
+#footer{
+    padding: .5rem 0 .5rem 0;
+}
+.footer-title .footer-title-principal{
+    margin: .2rem 0 .2rem 0;
+    font-size: 1rem;
+}
+
+/*1366*/
+@media (max-width: 1366px) {
+
+/*ARG7*/
+    
+#arg7{
+    width: 100%;
+    height: 120vh;
+    background-image: url(assets/imagens/final-fundo-desktop.png);
+    background-size:cover;
+    background-position: top right;
+    display: flex;
+    padding: 2rem 4rem 4rem 4rem;
+}
+/*texts*/
+.arg7-text{
+    width: 100%;
+    margin-top: 2rem;
+    padding-bottom: 0px;
+}
+.arg7-text .text-principal{
+    font-size: 3.2rem;
+    max-width: 60%;
+    margin-bottom: 3rem;
+}
+.arg7-text .text-secundario{
+    font-size: 1.6rem;
+    max-width: 50%;
+    line-height: 2.3rem;
+}
+.arg7-text .text-secundario b{
+    font-size: 1.8rem;
+}
+/*button*/
+#arg7-btn-{
+    margin-top: 4rem;
+    text-align: center;
+}
+.arg7-btn{
+    border: solid 0.15rem;
+    font-size: 1.5rem;
+    padding: 10px 20px 10px 20px;
+}
+
+/*END ARG7*/
+
+
+
+
+}
+
+
+/* 1280 */
+
+@media (max-width:1280px) {
+
+/*ARG7*/
+    
+#arg7{
+    width: 100%;
+    height: 120vh;
+    background-image: url(assets/imagens/final-fundo-desktop.png);
+    background-size:cover;
+    background-position: top right;
+    display: flex;
+    padding: 2rem 4rem 4rem 4rem;
+}
+/*texts*/
+.arg7-text{
+    width: 100%;
+    margin-top: 2rem;
+    padding-bottom: 0px;
+}
+.arg7-text .text-principal{
+    font-size: 3.2rem;
+    max-width: 60%;
+    margin-bottom: 4.5rem;
+}
+.arg7-text .text-secundario{
+    font-size: 1.6rem;
+    max-width: 50%;
+    line-height: 2.3rem;
+}
+.arg7-text .text-secundario b{
+    font-size: 1.8rem;
+}
+/*button*/
+#arg7-btn-{
+    margin-top: 4rem;
+    text-align: center;
+}
+.arg7-btn{
+    border: solid 0.15rem;
+    font-size: 1.5rem;
+    padding: 10px 20px 10px 20px;
+}
+
+/*END ARG7*/
+
+}
+
+/* 1280 */
+
+@media (max-width:1152px) {
+
+/*ARG7*/
+        
+#arg7{
+    width: 100%;
+    height: 120vh;
+    background-image: url(assets/imagens/final-fundo-desktop.png);
+    background-size:cover;
+    background-position: top left;
+    display: flex;
+    padding: 2rem 4rem 4rem 4rem;
+}
+/*texts*/
+.arg7-text{
+    width: 100%;
+    margin-top: 2rem;
+    padding-bottom: 0px;
+}
+.arg7-text .text-principal{
+    font-size: 3.2rem;
+    max-width: 70%;
+    margin-bottom: 4.5rem;
+}
+.arg7-text .text-secundario{
+    font-size: 1.6rem;
+    max-width: 60%;
+    line-height: 2.3rem;
+}
+.arg7-text .text-secundario b{
+    font-size: 1.8rem;
+}
+/*button*/
+#arg7-btn-{
+    margin-top: 4rem;
+    text-align: center;
+}
+.arg7-btn{
+    border: solid 0.15rem;
+    font-size: 1.5rem;
+    padding: 10px 20px 10px 20px;
+}
+
+/*END ARG7*/
+
+}
+
+
+
+
+/*1024 - 768*/
+@media (max-width:1024px) {
+
+/*CTA*/
+.cta {
+    margin: .8rem auto;
+    border: solid 0.20rem;
+    font-size: 1rem;
+    padding: 8px 20px;
+}
+
+/*HOME*/
+
+#home{
+    width: 100%;
+    height: 90;
+    background-image: url(assets/imagens/home-fundo-desktop.png);
+    background-size:cover;
+    background-position: top right;
+    display: flex;
+    padding: 2rem 4rem 4rem 4rem;
+    
+}
+/*texts*/
+.home-text{
+    width: 100%;
+    margin-top: 1rem;
+    padding-bottom: 0px;
+}
+.home-text .text-principal{
+    font-size: 2.6rem;
+    max-width: 60%;
+    margin-bottom: 3rem;
+}
+.home-text .text-secundario{
+    font-size: 1.5rem;
+    max-width: 50%;
+    line-height: 2.1rem;
+}
+.home-text .text-secundario b{
+    font-size: 1.6rem;
+}
+/*button*/
+.home-button .home-btnn{
+    border: solid 0.15rem;
+    font-size: 1.2rem;
+    padding: 10px 20px 10px 20px;
+    color: white;
+    border-radius: 5rem;
+}
+
+/*END HOME*/
+
+/*cards*/
+.content-card {
+    padding: 1rem;
+    margin: 0 2rem 4rem 2rem;
+}
+.content-card-title-secundario{
+    font-size: 1.7rem;
+}
+.content-card-title-principal{
+    font-size: 2.2rem;
+    margin: 0 2rem 2rem 2rem;
+}
+.content-card .background-card .container-card .card {
+    margin: .5rem;
+    width: 290px;
+    height: 330px;
+}
+.content-card .background-card .container-card .card .icon-benefits {
+    width: 4rem;
+} 
+.content-card .background-card .container-card .card .titlee {
+    font-size: 1.1rem;
+} 
+.content-card .background-card .container-card .card .titlee b{
+    font-size: 1.2rem;
+} 
+.content-card .background-card .container-card .card:hover {
+    height: 280px;
+}
+
+
+/*differentials*/
+.differentials-title-secundario{
+    font-size: 2rem;
+}
+.differentials-title-principal{
+    font-size: 4rem;
+    margin: 16rem 6rem 0 6rem;   
+}
+.differentials-button{
+    margin-top: 6rem;
+}
+.differentials-button .differentials-btn{
+    background: linear-gradient(167deg, rgba(147,192,31,1) 0%, rgb(102, 136, 15) 79%);
+    font-size: 1.5rem;
+    padding: 10px 20px 8px 20px;
+}
+/*END PRODUCT*/
+
+/*ARG-3*/
+.arg3-title .arg3-title-principal{
+    margin: 0 2rem 0 2rem;
+    text-align: right;
+    font-size: 2.2rem;
+    color: #fff;
+    max-width: 350px;
+}
+.arg3-title .arg3-title-secundario{
+    margin: 0 2rem 0 2rem;
+    text-align: right;
+    font-size: 1.5rem;
+    max-width: 350px;
+}
+.arg3-info{
+    max-width: 40%; 
+    margin: 8rem 0rem 8rem 0rem;
+}
+.icon-arg3-info {
+    max-width: 25px;
+    display: inline-block;
+    margin-bottom: -0.2rem;
+}
+.arg3-info-div {
+    margin: 3rem 2rem 3rem 2rem;
+    border-radius: 2rem;
+    flex-wrap: wrap;
+    max-width: 80%;
+}
+.arg3-infos{
+    font-size: 1.1rem;
+}
+.arg3-infos b{
+    font-size: 1.4rem;
+}
+
+/*ARG-4*/
+.arg4-title .arg4-title-principal{
+    margin: 0 2rem 0 2rem;
+    text-align: right;
+    font-size: 2.2rem;
+    max-width: 350px;
+}
+.arg4-title .arg4-title-secundario{
+    margin: 0 2rem 0 2rem;
+    text-align: right;
+    font-size: 1.5rem;
+    max-width: 350px;
+}
+.arg4-info{
+    max-width: 40%; 
+    margin: 4rem 0rem 4rem 0rem;
+}
+.icon-arg4-info {
+    max-width: 25px;
+    display: inline-block;
+    margin-bottom: -0.2rem;
+}
+.arg4-info-div {
+    margin: 3rem 2rem 3rem 2rem;
+    border-radius: 2rem;
+    flex-wrap: wrap;
+    max-width: 80%;
+}
+.arg4-infos{
+    font-size: 1.1rem;
+}
+.arg4-infos b{
+    font-size: 1.1rem;
+}
+
+/* ARG5 */
+.arg5-button .arg5-btn{
+    font-size: 1.5rem;
+    padding: 20px 25px 20px 25px;
+    border-radius: 5rem;
+}
+
+/*ARG7*/
+    
+#arg7{
+    width: 100%;
+    height: 120vh;
+    background-image: url(assets/imagens/final-fundo-desktop-1024.png);
+    background-size:cover;
+    background-position: bottom right;
+    display: flex;
+    padding: 2rem 4rem 4rem 4rem;
+}
+/*texts*/
+.arg7-text{
+    width: 100%;
+    margin-top: 2rem;
+    padding-bottom: 0px;
+}
+.arg7-text .text-principal{
+    font-size: 2.7rem;
+    max-width: 70%;
+    margin-bottom: 8rem;
+}
+.arg7-text .text-secundario{
+    font-size: 1.3rem;
+    max-width: 55%;
+    line-height: 1.8rem;
+}
+.arg7-text .text-secundario b{
+    font-size: 1.4rem;
+}
+/*button*/
+#arg7-btn-{
+    margin-top: 3rem;
+    text-align: center;
+}
+.arg7-btn{
+    border: solid 0.15rem;
+    font-size: 1.2rem;
+    padding: 8px 20px 8px 20px;
+}
+
+/*END ARG7*/
+
+/*FOOTER*/
+/*titulo*/
+#footer{
+    padding: .5rem 0 .5rem 0;
+}
+.footer-title .footer-title-principal{
+    margin: .2rem 0 .2rem 0;
+    font-size: .9rem;
+}
+
+}
+
+
+/*854*/
+
+@media (max-width:854px) {
+
+
+/*HOME*/
+
+#home{
+    width: 100%;
+    height: 120vh;
+    background-image: url(assets/imagens/home-fundo-desktop.png);
+    background-size:cover;
+    background-position: bottom left;
+    display: flex;
+    padding: 2rem 4rem 4rem 4rem;
+    
+}
+/*texts*/
+.home-text{
+    width: 100%;
+    margin-top: 1rem;
+    padding-bottom: 0px;
+}
+.home-text .text-principal{
+    font-size: 2.6rem;
+    max-width: 80%;
+    margin-bottom: 2rem;
+}
+.home-text .text-secundario{
+    font-size: 1.5rem;
+    max-width: 70%;
+    line-height: 2.1rem;
+}
+.home-text .text-secundario b{
+    font-size: 1.6rem;
+}
+/*button*/
+.home-button .home-btnn{
+    border: solid 0.15rem;
+    font-size: 1.2rem;
+    padding: 10px 20px 10px 20px;
+    color: white;
+    border-radius: 5rem;
+}
+
+/*END HOME*/
+
+/*ARG7*/
+    
+#arg7{
+    width: 100%;
+    height: 110vh;
+    background-image: url(assets/imagens/final-fundo-desktop-1024.png);
+    background-size:cover;
+    background-position: top left;
+    background-attachment: fixed;
+    display: flex;
+    padding: 2rem 4rem 4rem 4rem;
+}
+/*texts*/
+.arg7-text{
+    width: 100%;
+    margin-top: 2rem;
+    padding-bottom: 0px;
+}
+.arg7-text .text-principal{
+    font-size: 2.7rem;
+    max-width: 80%;
+    margin-bottom: 1rem;
+}
+.arg7-text .text-secundario{
+    font-size: 1.3rem;
+    max-width: 75%;
+    line-height: 1.8rem;
+}
+.arg7-text .text-secundario b{
+    font-size: 1.4rem;
+}
+/*button*/
+#arg7-btn-{
+    margin-top: 2rem;
+    text-align: center;
+}
+.arg7-btn{
+    border: solid 0.15rem;
+    font-size: 1.2rem;
+    padding: 8px 20px 8px 20px;
+}
+
+/*END ARG7*/
+
+
+
+
+
+}
+
+/*390 - 000*/
+@media (max-width:600px) {
+
+/*CTA*/
+.cta {
+    border: solid 0.15rem;
+    margin: .5rem auto;
+    font-size: 1rem;
+    padding: 8px 10px;
+}
+
+/*HOME*/
+
+#home{
+    width: 100%;
+    height: 100vh;
+    background-image: url(assets/imagens/home-fundo-mobile.png);
+    background-size:cover;
+    background-position: top right;
+    display: flex;
+    padding: 2rem 1rem 4rem 1rem;
+    
+}
+/*texts*/
+.home-text{
+    width: 100%;
+    padding-bottom: 0px;
+}
+.home-text .text-principal{
+    font-size: 2rem;
+    max-width: 100%;
+    margin-bottom: 10rem;
+    margin-top: 2rem;
+}
+.home-text .text-secundario{
+    font-size: 1.1rem;
+    max-width: 70%;
+    line-height: 1.5rem;
+}
+.home-text .text-secundario b{
+    font-size: 1.2rem;
+}
+/*button*/
+.home-button .home-btnn{
+    border: solid 0.15rem;
+    font-size: 1.2rem;
+    padding: 10px 20px 10px 20px;
+    color: white;
+    border-radius: 5rem;
+}
+
+/*END HOME*/
+
+/*cards*/
+#benefits{
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+    background-image: url(assets/imagens/background-benefits-.png);
+}
+.content-card {
+    padding: 1rem;
+    margin: 0 1.5rem 4rem 1.5rem;
+}
+.content-card-title-secundario{
+    margin-top: 1rem;
+    font-size: 1.3rem;
+}
+.content-card-title-principal{
+    margin: 0;
+    font-size: 1.6rem;
+}
+.content-card .background-card .container-card .card {
+    margin: .5rem;
+    width: 260px;
+    height: 280px;
+}
+.content-card .background-card .container-card .card .icon-benefits {
+    width: 4rem;
+} 
+.content-card .background-card .container-card .card .titlee {
+    font-size: .95rem;
+} 
+.content-card .background-card .container-card .card .titlee b{
+    font-size: .95rem;
+} 
+.content-card .background-card .container-card .card:hover {
+    height: 230px;
+}
+
+/*chamada*/
+.differentials-title-secundario{
+    font-size: 1.5rem;
+}
+.differentials-title-principal{
+    font-size: 2.2rem;
+    margin: 10rem 1rem 0 1rem;
+}
+.differentials-button{
+    margin-top: 6rem;
+}
+.differentials-button .differentials-btn{
+    font-weight: 800;
+    background: linear-gradient(167deg, rgba(147,192,31,1) 0%, rgb(102, 136, 15) 79%);
+    font-size: 1.5rem;
+    padding: 10px 20px 8px 20px;
+}
+
+/*arg3*/
+#arg3{
+    flex-direction: column;
+    overflow: hidden;
+    gap: 2rem;
+    padding-top: 3rem;
+}
+.arg3-title .arg3-title-principal{
+    margin: 0 1rem 0 1rem;
+    text-align: center;
+    font-size: 1.8rem;
+    color: #fff;
+    max-width: 100%;
+}
+.arg3-title .arg3-title-secundario{
+    margin: 0 2rem 0 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.arg3-info{
+    max-width: 100%; 
+    margin: 0rem 0rem 4rem 0rem;
+}
+.icon-arg3-info {
+    max-width: 25px;
+    display: inline-block;
+    margin-bottom: -0.2rem;
+}
+.arg3-info-div {
+    margin: 1rem 2rem 4rem 2rem;
+    border-radius: 2rem;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+.arg3-infos{
+    font-size: 1.1rem;
+}
+.arg3-infos b{
+    font-size: 1.4rem;
+}
+
+/*arg4*/
+#arg4{
+    flex-direction: column;
+    overflow: hidden;
+    gap: 2rem;
+    padding-top: 3rem;
+}
+.arg4-title .arg4-title-principal{
+    margin: 0 1rem 0 1rem;
+    text-align: center;
+    font-size: 1.8rem;
+    max-width: 100%;
+}
+.arg4-title .arg4-title-secundario{
+    margin: 0 2rem 0 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.arg4-info{
+    max-width: 100%; 
+    margin: 0rem 0rem 4rem 0rem;
+}
+.icon-arg4-info {
+    max-width: 25px;
+    display: inline-block;
+    margin-bottom: -0.2rem;
+}
+.arg4-info-div {
+    margin: 1rem 2rem 4rem 2rem;
+    border-radius: 2rem;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+.arg4-infos{
+    font-size: 1.2rem;
+}
+.arg4-infos b{
+    font-size: 1.2rem;
+}
+
+/* ARG5 */
+
+#arg5{
+    width: 100%;
+}
+.arg5-button{
+    margin: 6rem 1rem 6rem 1rem;
+}
+.arg5-button .arg5-btn{
+    font-size: 1.3rem;
+    padding: 10px 20px 8px 20px;
+}
+
+/*ARG7*/
+
+#arg7{
+    width: 100%;
+    height: 100vh;
+    background-image: url(assets/imagens/final-fundo-mobile.png);
+    background-size:cover;
+    background-position: right bottom;
+    display: flex;
+    background-attachment: fixed;
+    padding: 2rem 1rem 4rem 1rem;
+    
+}
+/*texts*/
+.arg7-text{
+    width: 100%;
+    margin-top: 3rem;
+    padding-bottom: 0px;
+}
+.arg7-text .text-principal{
+    font-size: 1.9rem;
+    max-width: 90%;
+    margin-bottom: 5rem;
+}
+.arg7-text .text-secundario{
+    font-size: 1.1rem;
+    max-width: 60%;
+    line-height: 1.3rem;
+}
+.arg7-text .text-secundario b{
+    font-size: 1.2rem;
+}
+/*button*/
+#arg7-btn-{
+    margin-top: 6rem;
+    text-align: center;
+}
+.arg7-btn{
+    border: solid 0.15rem;
+    font-size: 1.2rem;
+    padding: 6px 18px 6px 18px;
+}
+
+/*END ARG7*/
+
+/*FOOTER*/
+/*titulo*/
+#footer{
+    padding: .5rem 0 .5rem 0;
+}
+.footer-title .footer-title-principal{
+    margin: .2rem 0 .2rem 0;
+    font-size: .8rem;
+}
+
+}
+
+/*320 - 000*/
+@media (max-width:320px) {
+
+
+/*HOME*/
+
+#home{
+    width: 100%;
+    height: 100vh;
+    background-image: url(assets/imagens/home-fundo-mobile.png);
+    background-size:cover;
+    background-position: bottom right;
+    display: flex;
+    padding: 0rem 1rem 4rem 1rem;
+    
+}
+/*texts*/
+.home-text{
+    width: 100%;
+    padding-bottom: 0px;
+}
+.home-text .text-principal{
+    font-size: 1.65rem;
+    max-width: 100%;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+.home-text .text-secundario{
+    font-size: 1.1rem;
+    max-width: 80%;
+    line-height: 1.5rem;
+}
+.home-text .text-secundario b{
+    font-size: 1.2rem;
+}
+/*button*/
+.home-button{
+    margin-top: 1rem;
+    width: 100%;
+}
+.home-button .home-btnn{
+    border: solid 0.15rem;
+    font-size: 1rem;
+    padding: 5px 15px 5px 15px;
+    color: white;
+    border-radius: 5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+/*END HOME*/
+
+/*ARG7*/
+
+#arg7{
+    width: 100%;
+    height: 100vh;
+    background-image: url(assets/imagens/final-fundo-mobile.png);
+    background-size:cover;
+    background-position: right bottom;
+    display: flex;
+    background-attachment:local;
+    padding: 2rem 1rem 4rem 1rem;
+    
+}
+/*texts*/
+.arg7-text{
+    width: 100%;
+    margin-top: 0rem;
+    padding-bottom: 0px;
+}
+.arg7-text .text-principal{
+    font-size: 1.6rem;
+    max-width: 90%;
+    margin-bottom: 2rem;
+}
+.arg7-text .text-secundario{
+    font-size: 1rem;
+    max-width: 75%;
+    line-height: 1.2rem;
+}
+.arg7-text .text-secundario b{
+    font-size: 1rem;
+}
+/*button*/
+#arg7-btn-{
+    margin-top: 1.5rem;
+    text-align: center;
+}
+.arg7-btn{
+    border: solid 0.15rem;
+    font-size: 1rem;
+    padding: 6px 18px 6px 18px;
+}
+
+/*END ARG7*/
+
+/*FOOTER*/
+/*titulo*/
+#footer{
+    padding: 0rem 2rem 0rem 2rem;
+}
+.footer-title .footer-title-principal{
+    margin: .3rem 0 .3rem 0;
+    font-size: .8rem;
+}
+
+
+}
+
+}
